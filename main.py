@@ -46,7 +46,8 @@ def main(data_directory, exp_directory, epochs, batch_size):
     metrics = {'f1_score': f1_score, 'auroc': roc_auc_score}
 
     # Create the dataloader
-    dataloaders = datahandler.get_dataloader_single_folder(
+    #dataloaders = datahandler.get_dataloader_single_folder(
+    dataloaders = datahandler.get_dataloader_sep_folder(
         data_directory, batch_size=batch_size)
     _ = train_model(model,
                     criterion,
