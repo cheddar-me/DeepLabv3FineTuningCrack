@@ -47,16 +47,15 @@ def train_model(model, criterion, dataloaders, optimizer, metrics, bpath,
                 model.eval()  # Set model to evaluate mode
 
             # Iterate over data.
-            for sample in tqdm(iter(dataloaders[phase])):
+            for sample in tqdm(dataloaders[phase], desc=f'{phase} Epoch {epoch}'):
                 inputs = sample['image'].to(device)
                 masks = sample['mask'].to(device)
-                # zero the parameter gradients
-                optimizer.zero_grad()
 
                 # track history if only in train
                 with torch.set_grad_enabled(phase == 'Train'):
                     outputs = model(inputs)
-                    loss = criterion(outputs['out'], masks)
+                    print("outputs.shape",outputs['out'].data.cpu().numpy().shape)
+                    loss = criterion(outputs['out'], masks) 
 
                     # Convert outputs to predicted classes
                     #y_pred = outputs['out'].data.cpu().numpy().ravel()  # Case of binary classification
@@ -65,12 +64,10 @@ def train_model(model, criterion, dataloaders, optimizer, metrics, bpath,
                     
                     y_true = masks.data.cpu().numpy().ravel()
 
-                    print('y_pred unique values',np.unique(y_pred))
-                    print('y_true unique values',np.unique(y_true))
                     for name, metric in metrics.items():
                         batchsummary[f'{phase}_{name}'].append(
                                 metric(y_true, y_pred))  # Change to support Accuracy metric and IOU
-                    
+
                     #for name, metric in metrics.items(): # Case of binary classification
                        # if name == 'f1_score':
                             # Use a classification threshold of 0.1

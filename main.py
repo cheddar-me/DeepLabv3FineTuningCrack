@@ -34,11 +34,11 @@ def calculate_iou(preds, targets, num_classes):
               help="Specify the experiment directory.")
 @click.option(
     "--epochs",
-    default=15,
+    default=2,
     type=int,
     help="Specify the number of epochs you want to run the experiment for.")
 @click.option("--batch-size",
-              default=4,
+              default=2,
               type=int,
               help="Specify the batch size for the dataloader.")
 @click.option("--num-classes",
@@ -48,7 +48,7 @@ def calculate_iou(preds, targets, num_classes):
 def main(data_directory, exp_directory, epochs, batch_size, num_classes):
     # Create the deeplabv3 resnet101 model which is pretrained on a subset
     # of COCO train2017, on the 20 categories that are present in the Pascal VOC dataset.
-    model = createDeepLabv3()
+    model = createDeepLabv3(outputchannels=num_classes)
     model.train()
     data_directory = Path(data_directory)
     # Create the experiment directory if not present

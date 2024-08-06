@@ -8,7 +8,7 @@ from typing import Any, Callable, Optional
 import numpy as np
 from PIL import Image
 from torchvision.datasets.vision import VisionDataset
-
+import torch
 
 class SegmentationDataset(VisionDataset):
     """A PyTorch dataset for image segmentation task.
@@ -112,12 +112,13 @@ class SegmentationDataset(VisionDataset):
                 mask = mask.convert("RGB")
             elif self.mask_color_mode == "grayscale":
                 mask = mask.convert("L")
+
             sample = {"image": image, "mask": mask}
 
             if self.transforms:
                 sample["image"] = self.transforms(sample["image"])
                 #sample["mask"] = self.transforms(sample["mask"])
-                sample["mask"] = np.array(sample["mask"], dtype=np.int64)  # Ensure mask is in int64 format for multi-class support
+                sample["mask"]  = torch.tensor(np.array(sample["mask"] , dtype=np.int64) , dtype=torch.long)  # Use dtype=torch.long for class indices
             return sample
 
         return sample
