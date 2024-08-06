@@ -1,0 +1,54 @@
+Epoch 1/15
+----------
+100%|███████████████████████████████████████████| 16/16 [02:01<00:00,  7.59s/it]
+Train Loss: 0.0583
+100%|█████████████████████████████████████████████| 4/4 [00:33<00:00,  8.48s/it]
+Test Loss: 0.2078
+{'epoch': 1, 'Train_loss': 0.058297403156757355, 'Test_loss': 0.2077568769454956, 'Train_f1_score': np.float64(0.7390296562124394), 'Train_auroc': np.float64(0.8813931811030961), 'Test_f1_score': np.float64(0.7457538238763468), 'Test_auroc': np.float64(0.794693708457307)}
+Epoch 2/15
+----------
+100%|███████████████████████████████████████████| 16/16 [01:59<00:00,  7.49s/it]
+Train Loss: 0.0561
+100%|█████████████████████████████████████████████| 4/4 [00:36<00:00,  9.15s/it]
+Test Loss: 0.0843
+{'epoch': 2, 'Train_loss': 0.05613173916935921, 'Test_loss': 0.08431258052587509, 'Train_f1_score': np.float64(0.6810313637593808), 'Train_auroc': np.float64(0.9342707477694205), 'Test_f1_score': np.float64(0.7431785516310597), 'Test_auroc': np.float64(0.7844472917218684)}
+Epoch 3/15
+----------
+100%|███████████████████████████████████████████| 16/16 [02:07<00:00,  7.97s/it]
+Train Loss: 0.0274
+100%|█████████████████████████████████████████████| 4/4 [00:34<00:00,  8.60s/it]
+Test Loss: 0.0270
+{'epoch': 3, 'Train_loss': 0.027386602014303207, 'Test_loss': 0.026989774778485298, 'Train_f1_score': np.float64(0.7136650588997603), 'Train_auroc': np.float64(0.9392849948616986), 'Test_f1_score': np.float64(0.7550101488687322), 'Test_auroc': np.float64(0.799072314517485)}
+Epoch 4/15
+----------
+100%|███████████████████████████████████████████| 16/16 [02:03<00:00,  7.74s/it]
+Train Loss: 0.0220
+100%|█████████████████████████████████████████████| 4/4 [00:38<00:00,  9.74s/it]
+Test Loss: 0.0202
+{'epoch': 4, 'Train_loss': 0.021996403113007545, 'Test_loss': 0.020198838785290718, 'Train_f1_score': np.float64(0.7346723555381296), 'Train_auroc': np.float64(0.9403641554401001), 'Test_f1_score': np.float64(0.773088028887134), 'Test_auroc': np.float64(0.799526915532072)}
+Epoch 5/15
+----------
+100%|███████████████████████████████████████████| 16/16 [02:04<00:00,  7.77s/it]
+Train Loss: 0.0168
+100%|█████████████████████████████████████████████| 4/4 [00:34<00:00,  8.60s/it]
+Test Loss: 0.0222
+{'epoch': 5, 'Train_loss': 0.016827832907438278, 'Test_loss': 0.02223386988043785, 'Train_f1_score': np.float64(0.77775809535803), 'Train_auroc': np.float64(0.9407147917857863), 'Test_f1_score': np.float64(0.7748436208203704), 'Test_auroc': np.float64(0.7997080161265447)}
+Epoch 6/15
+----------
+100%|███████████████████████████████████████████| 16/16 [02:06<00:00,  7.88s/it]
+Train Loss: 0.0132
+100%|█████████████████████████████████████████████| 4/4 [00:34<00:00,  8.62s/it]
+Test Loss: 0.0230
+{'epoch': 6, 'Train_loss': 0.013207764364778996, 'Test_loss': 0.023015663027763367, 'Train_f1_score': np.float64(0.7999121307181148), 'Train_auroc': np.float64(0.9409086412390322), 'Test_f1_score': np.float64(0.7738740943237769), 'Test_auroc': np.float64(0.7995862383373857)}
+Epoch 7/15
+----------
+100%|███████████████████████████████████████████| 16/16 [02:06<00:00,  7.93s/it]
+Train Loss: 0.0132
+100%|█████████████████████████████████████████████| 4/4 [00:35<00:00,  8.84s/it]
+Test Loss: 0.0206
+{'epoch': 7, 'Train_loss': 0.013180086389183998, 'Test_loss': 0.020639576017856598, 'Train_f1_score': np.float64(0.8379215218783893), 'Train_auroc': np.float64(0.9409921340690569), 'Test_f1_score': np.float64(0.7772900857995552), 'Test_auroc': np.float64(0.7995474188094043)}
+Epoch 8/15
+----------
+ 69%|█████████████████████████████▌             | 11/16 [01:14<00:37,  7.54s/it]zsh: segmentation fault  python main.py --data-directory sample_dataset_passports --exp_directory
+(base) mauriciotoro@Mauricios-MacBook-Pro DeepLabv3FineTuningCrack % /Users/mauriciotoro/.pyenv/versions/3.9.9/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 33 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
