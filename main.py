@@ -34,7 +34,7 @@ def calculate_iou(preds, targets, num_classes):
               help="Specify the experiment directory.")
 @click.option(
     "--epochs",
-    default=2,
+    default=20,
     type=int,
     help="Specify the number of epochs you want to run the experiment for.")
 @click.option("--batch-size",

@@ -54,7 +54,6 @@ def train_model(model, criterion, dataloaders, optimizer, metrics, bpath,
                 # track history if only in train
                 with torch.set_grad_enabled(phase == 'Train'):
                     outputs = model(inputs)
-                    print("outputs.shape",outputs['out'].data.cpu().numpy().shape)
                     loss = criterion(outputs['out'], masks) 
 
                     # Convert outputs to predicted classes
